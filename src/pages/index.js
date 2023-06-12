@@ -1,118 +1,67 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <section className="flex flex-col items-center min-h-screen bg-green-700 text-white">
+      <section className="m-10">
+        <h1 className="text-5xl text-dark-green mb-4">Welcome to the Sustainable Living Guru</h1>
+        <p className="text-2xl text-dark-green">Embrace a lifestyle that's good for you and the Earth.</p>
+      </section>
+      
+      <section className="w-full max-w-2xl mx-auto px-6 py-10 mb-12 bg-white text-gray-800 rounded-lg shadow-lg">
+        <h2 className="text-3xl mb-3 text-green-800">Why Embrace Sustainable Living?</h2>
+        <p className="text-lg mb-3">Our planet is under increasing pressure from the unsustainable actions of the human race. Overuse of natural resources, pollution, and disregard for ecosystems are leading to significant environmental and health crises. But we can change this. By making conscious, sustainable choices, we can help restore balance and promote a healthy planet.</p>
+        <p className="text-lg mb-3">Here are some ways you can start making a difference:</p>
+        <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-left">
+          <li className="flex"><span className="mr-2">➤</span>Effective land use and wildlife protection</li>
+          <li className="flex"><span className="mr-2">➤</span>Sustainable water usage</li>
+          <li className="flex"><span className="mr-2">➤</span>Supporting local and organic foods</li>
+          <li className="flex"><span className="mr-2">➤</span>The use of sustainable materials</li>
+          <li className="flex"><span className="mr-2">➤</span>The use of sustainable transport</li>
+          <li className="flex"><span className="mr-2">➤</span>Zero waste and zero carbon</li>
+          <li className="flex"><span className="mr-2">➤</span>Creating your own healthy environment</li>
+          <li className="flex"><span className="mr-2">➤</span>Respecting and realizing local cultural values</li>
+        </ul>
+      </section>
+
+      <section className="mb-12 w-full max-w-2xl mx-auto px-6 py-10 bg-white text-gray-800 rounded-lg shadow-lg">
+        <h2 className="text-3xl text-green-800 mb-3">The Power of Reusable Water Bottles</h2>
+        <Image src="/images/water-bottle.jpg" width={500} height={300} alt="Reusable Water Bottle" className="w-full object-cover mb-4" />
+        <p className="text-lg mb-6">Did you know that by switching to a reusable water bottle, you could save up to $3,000 a year? Not to mention, you'd be reducing your consumption of single-use plastics and contributing to a healthier planet. So why wait? Make the switch today!</p>
+      </section>
+
+      <section className="flex flex-wrap justify-around">
+        <div className="m-2 w-72 bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer" onClick={()=>window.location.href='/tips'}>
+          <div className="h-48 relative">
+            <Image src="/images/green-energy.jpg" layout="fill" objectFit="cover" alt="Green energy" />
+          </div>
+          <div className="p-6">
+            <h2 className="text-2xl text-green-800">Green Energy</h2>
+            <p className="text-gray-700">Discover the power of renewable energy.</p>
+          </div>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="m-2 w-72 bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer" onClick={()=>window.location.href='/products'}>
+          <div className="h-48 relative">
+            <Image src="/images/eco-products.jpg" layout="fill" objectFit="cover" alt="Eco products" />
+          </div>
+          <div className="p-6">
+            <h2 className="text-2xl text-green-800">Eco-Friendly Products</h2>
+            <p className="text-gray-700">Explore products that are kind to the environment.</p>
+          </div>
+        </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <div className="m-2 w-72 bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer" onClick={()=>window.location.href='/community'}>
+          <div className="h-48 relative">
+            <Image src="/images/community.jpg" layout="fill" objectFit="cover" alt="Community" />
+          </div>
+          <div className="p-6">
+            <h2 className="text-2xl text-green-800">Community</h2>
+            <p className="text-gray-700">Join others passionate about sustainable living.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  );
 }
