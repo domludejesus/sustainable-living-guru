@@ -25,13 +25,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className="mb-12 w-full max-w-2xl mx-auto px-6 py-10 bg-white text-gray-800 rounded-lg shadow-lg">
-        <h2 className="text-3xl text-green-800 mb-3">The Power of Reusable Water Bottles</h2>
-        <Image src="/water-bottle.webp" width={300} height={300} alt="Reusable Water Bottle" className="w-full object-cover mb-4" />
-        <p className="text-lg mb-6">Did you know that by switching to a reusable water bottle, you could save up to $3,000 a year? Not to mention, youd be reducing your consumption of single-use plastics and contributing to a healthier planet. So why wait? Make the switch today!</p>
-      </section>
-
-      <section className="flex flex-wrap justify-around">
+      <section className="flex flex-wrap justify-around mb-12">
         <div className="m-2 w-72 bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer" onClick={()=>window.location.href='/tips'}>
           <div className="h-48 relative">
             <Image src="/green.webp" fill={true} alt="Green energy" />
@@ -62,6 +56,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="mb-12 w-full max-w-2xl mx-auto px-6 py-10 bg-white text-gray-800 rounded-lg shadow-lg">
+        <h2 className="text-3xl text-green-800 mb-3">The Power of Reusable Water Bottles</h2>
+        <Image src="/water-bottle.webp" width={300} height={300} alt="Reusable Water Bottle" className="w-full object-cover mb-4" />
+        <p className="text-lg mb-6">Did you know that by switching to a reusable water bottle, you could save up to $3,000 a year? Not to mention, youd be reducing your consumption of single-use plastics and contributing to a healthier planet. So why wait? Make the switch today!</p>
+      </section>
+
     </section>
   );
 }
