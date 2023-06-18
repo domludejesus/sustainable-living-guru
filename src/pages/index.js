@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center min-h-screen bg-green-700 text-white">
       <section className="m-10">
-        <h1 className="text-5xl text-dark-green mb-4">Welcome to the Sustainable Living Guru</h1>
+        <h1 className="text-5xl text-dark-green mb-4">Welcome to Green Beacon</h1>
         <p className="text-2xl text-dark-green">Embrace a lifestyle thats good for you and the Earth.</p>
       </section>
       
