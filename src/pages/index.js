@@ -27,24 +27,24 @@ export default function Home() {
 
       <section className="mb-12 w-full max-w-2xl mx-auto px-6 py-10 bg-white text-gray-800 rounded-lg shadow-lg">
         <h2 className="text-3xl text-green-800 mb-3">The Power of Reusable Water Bottles</h2>
-        <Image src="/images/water-bottle.jpg" width={500} height={300} alt="Reusable Water Bottle" className="w-full object-cover mb-4" />
+        <Image src="/water-bottle.webp" width={300} height={300} alt="Reusable Water Bottle" className="w-full object-cover mb-4" />
         <p className="text-lg mb-6">Did you know that by switching to a reusable water bottle, you could save up to $3,000 a year? Not to mention, youd be reducing your consumption of single-use plastics and contributing to a healthier planet. So why wait? Make the switch today!</p>
       </section>
 
       <section className="flex flex-wrap justify-around">
         <div className="m-2 w-72 bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer" onClick={()=>window.location.href='/tips'}>
           <div className="h-48 relative">
-            <Image src="/images/green-energy.jpg" layout="fill" objectFit="cover" alt="Green energy" />
+            <Image src="/green.webp" fill={true} alt="Green energy" />
           </div>
           <div className="p-6">
             <h2 className="text-2xl text-green-800">Green Energy</h2>
-            <p className="text-gray-700">Discover the power of renewable energy.</p>
+            <p className="text-gray-700">Discover thae power of renewable energy.</p>
           </div>
         </div>
 
         <div className="m-2 w-72 bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer" onClick={()=>window.location.href='/products'}>
           <div className="h-48 relative">
-            <Image src="/images/eco-products.jpg" layout="fill" objectFit="cover" alt="Eco products" />
+            <Image src="/green-products.webp" fill={true} alt="Eco products" />
           </div>
           <div className="p-6">
             <h2 className="text-2xl text-green-800">Eco-Friendly Products</h2>
@@ -54,7 +54,7 @@ export default function Home() {
 
         <div className="m-2 w-72 bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer" onClick={()=>window.location.href='/community'}>
           <div className="h-48 relative">
-            <Image src="/images/community.jpg" layout="fill" objectFit="cover" alt="Community" />
+            <Image src="/community.webp" fill={true} alt="Community" />
           </div>
           <div className="p-6">
             <h2 className="text-2xl text-green-800">Community</h2>
